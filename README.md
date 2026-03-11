@@ -1,9 +1,10 @@
 # Register
 
-两个注册机汇总：
+三个注册机汇总：
 
 - `openai-register/`：OpenAI 自动注册脚本（详见目录内 README）
 - `grok-register/`：Grok (x.ai) 注册机（详见目录内 README）
+- `tavily-register/`：Tavily 自动注册脚本，现已接入 YesCaptcha 验证码识别、GPTMail 邮箱验证，并内置单 IP 限速保护（每 5 个等待 90 分钟）
 
 ### 📢 关注我的频道
 
@@ -17,10 +18,10 @@
 
 ### 🔧 资源推荐
 - YesCaptcha 推荐注册链接（grok Turnstile 云解）：https://yescaptcha.com/i/tlkF6o
+- Tavily API Key 闲鱼小店：如果你需要现成可用的 Tavily API Key，可以直接前往闲鱼小店下单：https://m.tb.cn/h.i2HIraW?tk=iiQYUF6nihb
 
 ### 💬 交流与反馈
-- TG 频道：@MasterAlanLab
-- 技术问题：提 Issue；
-- 合作/建议：平台私信或留言。
+- TG 频道：https://t.me/MasterAlanLab
+- 商务合作：masteralanlab@gmail.com
 
 如果对你有帮助，记得点个 ⭐ 支持一下！

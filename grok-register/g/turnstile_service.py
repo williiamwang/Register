@@ -9,7 +9,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+
+YESCAPTCHA_SOFT_ID = 102154
+
+
+
+
+
 class TurnstileService:
+
     """Turnstile验证服务类"""
 
     def __init__(self, solver_url="http://127.0.0.1:5072"):
@@ -27,14 +35,15 @@ class TurnstileService:
         if self.yescaptcha_key:
             # 使用 YesCaptcha API
             url = f"{self.yescaptcha_api}/createTask"
-            payload = {
-                "clientKey": self.yescaptcha_key,
-                "task": {
-                    "type": "TurnstileTaskProxyless",
-                    "websiteURL": siteurl,
-                    "websiteKey": sitekey
-                }
-            }
+            payload = {
+                "clientKey": self.yescaptcha_key,
+                "task": {
+                    "type": "TurnstileTaskProxyless",
+                    "websiteURL": siteurl,
+                    "websiteKey": sitekey
+                },
+                "softID": YESCAPTCHA_SOFT_ID,
+            }
             response = requests.post(url, json=payload)
             response.raise_for_status()
             data = response.json()
